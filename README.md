@@ -21,10 +21,10 @@ A modern property-based testing framework for [Qiskit](https://qiskit.org/) quan
 pip install -e /path/to/quantum-properties
 ```
 
-### From GitHub (when published)
+### From GitHub
 
 ```bash
-pip install quantum-properties
+pip install "quantum-properties @ git+https://github.com/laurabubble1/quantum-properties.git@main"
 ```
 
 ## Quick Start
