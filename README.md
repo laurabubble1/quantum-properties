@@ -216,7 +216,7 @@ If you use quantum-properties in your research, please cite:
 ```bibtex
 @software{quantum_properties_2026,
   title={Quantum Properties: Property-Based Testing for Qiskit},
-  author={Bubble, Laura},
+  author={Kubler, Laura},
   year={2026},
   url={https://github.com/laurabubble1/quantum-properties}
 }
