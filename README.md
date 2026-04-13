@@ -4,7 +4,7 @@ A modern property-based testing framework for [Qiskit](https://qiskit.org/) quan
 
 **Replaces the legacy Qcheck framework** with a clean, modern API compatible with Qiskit 2.3.1+.
 
-## Features
+## Capabilities
 
 - ✅ **Entanglement Detection** - Assert qubits are entangled or separable
 - ✅ **Distribution Analysis** - Verify measurement probability distributions  
@@ -15,13 +15,13 @@ A modern property-based testing framework for [Qiskit](https://qiskit.org/) quan
 
 ## Installation
 
-### From local directory:
+### From local directory
 
 ```bash
 pip install -e /path/to/quantum-properties
 ```
 
-### From GitHub (when published):
+### From GitHub (when published)
 
 ```bash
 pip install quantum-properties
@@ -188,7 +188,7 @@ def assert_distribution_matches(
 
 ## Development
 
-### Setup development environment:
+### Setup development environment
 
 ```bash
 git clone https://github.com/laurabubble1/quantum-properties.git
@@ -196,22 +196,18 @@ cd quantum-properties
 pip install -e ".[dev]"
 ```
 
-### Run tests:
+### Run tests
 
 ```bash
 pytest tests/ -v
 ```
 
-### Format code:
+### Format code
 
 ```bash
 black quantum_properties/ tests/
 ruff check quantum_properties/ tests/
 ```
-
-## License
-
-Apache 2.0 - See LICENSE file
 
 ## Citation
 

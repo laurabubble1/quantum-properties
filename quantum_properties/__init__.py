@@ -76,7 +76,6 @@ from quantum_properties.reporting import (
 
 __version__ = "0.2.0"
 __author__ = "Laura Bubble"
-__license__ = "Apache 2.0"
 
 __all__ = [
     # Core
