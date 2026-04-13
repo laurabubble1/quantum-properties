@@ -32,7 +32,7 @@ class StateVectorVerifier:
         # Remove measurements if present
         if hasattr(qc_copy, 'data'):
             qc_copy.data = [instr for instr in qc_copy.data 
-                           if instr[0].name not in ['measure', 'reset']]
+                           if instr.operation.name not in ['measure', 'reset']]
         
         result = self.simulator.run(qc_copy).result()
         sv = result.get_statevector(qc_copy)

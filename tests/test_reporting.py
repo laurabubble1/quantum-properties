@@ -1,9 +1,9 @@
-from quantum_properties.reporting import HTMLReport, ReportFormatter, TestMetrics, TestReport
+from quantum_properties.reporting import CircuitReport, HTMLReport, ReportFormatter, CircuitMetrics
 
 
 def test_test_report_summary_includes_failure_details():
-    metrics = TestMetrics(total_tests=3, passed_tests=2, failed_tests=1, pass_rate=2 / 3, errors=["boom"])
-    report = TestReport(circuit_name="bell", metrics=metrics)
+    metrics = CircuitMetrics(total_tests=3, passed_tests=2, failed_tests=1, pass_rate=2 / 3, errors=["boom"])
+    report = CircuitReport(circuit_name="bell", metrics=metrics)
 
     text = report.summary()
     assert "bell" in text
@@ -13,8 +13,8 @@ def test_test_report_summary_includes_failure_details():
 
 
 def test_test_report_detailed_report_includes_sections():
-    metrics = TestMetrics(total_tests=2, passed_tests=2, failed_tests=0, pass_rate=1.0, errors=[])
-    report = TestReport(
+    metrics = CircuitMetrics(total_tests=2, passed_tests=2, failed_tests=0, pass_rate=1.0, errors=[])
+    report = CircuitReport(
         circuit_name="ghz",
         metrics=metrics,
         property_results={"entangled": True},
@@ -64,7 +64,7 @@ def test_pass_fail_summary_computes_rate_and_lists_results():
 
 
 def test_html_report_includes_metrics_properties_and_errors():
-    metrics = TestMetrics(total_tests=3, passed_tests=2, failed_tests=1, pass_rate=2 / 3, errors=["failure"])
+    metrics = CircuitMetrics(total_tests=3, passed_tests=2, failed_tests=1, pass_rate=2 / 3, errors=["failure"])
     html = HTMLReport.generate_report(
         circuit_name="demo",
         metrics=metrics,

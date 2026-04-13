@@ -49,7 +49,7 @@ def test_get_statevector_strips_measurements_and_reset(monkeypatch):
     captured = {}
 
     def fake_run(circuit):
-        captured["ops"] = [inst[0].name for inst in circuit.data]
+        captured["ops"] = [inst.operation.name for inst in circuit.data]
         return _FakeJob([1 + 0j, 0 + 0j])
 
     monkeypatch.setattr(verifier.simulator, "run", fake_run)

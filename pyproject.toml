@@ -9,7 +9,7 @@ description = "Modern property-based testing framework for Qiskit quantum circui
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
-    {name = "Laura Bubble", email = "laura@example.com"}
+    {name = "Laura Kubler", email = "laulaukubler@gamil.com"}
 ]
 keywords = [
     "quantum",

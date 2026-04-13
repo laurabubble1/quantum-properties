@@ -6,7 +6,7 @@ from typing import NamedTuple
 from dataclasses import dataclass
 
 
-class TestMetrics(NamedTuple):
+class CircuitMetrics(NamedTuple):
     """Test metrics and statistics."""
     total_tests: int
     passed_tests: int
@@ -16,10 +16,10 @@ class TestMetrics(NamedTuple):
 
 
 @dataclass
-class TestReport:
+class CircuitReport:
     """Comprehensive test report for quantum circuits."""
     circuit_name: str
-    metrics: TestMetrics
+    metrics: CircuitMetrics
     property_results: dict[str, bool] | None = None
     statistical_results: dict[str, float] | None = None
     noise_results: dict[str, float] | None = None
@@ -207,7 +207,7 @@ class HTMLReport:
     @staticmethod
     def generate_report(
         circuit_name: str,
-        metrics: TestMetrics,
+        metrics: CircuitMetrics,
         property_results: dict[str, bool] | None = None,
         distribution: dict[str, int] | None = None,
     ) -> str:
@@ -215,7 +215,7 @@ class HTMLReport:
         
         Args:
             circuit_name: Name of tested circuit
-            metrics: Test metrics
+            metrics: Circuit metrics
             property_results: Property test results
             distribution: Measurement distribution
             

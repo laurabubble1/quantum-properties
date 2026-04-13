@@ -68,8 +68,8 @@ from quantum_properties.noise import (
 
 # Reporting
 from quantum_properties.reporting import (
-    TestReport,
-    TestMetrics,
+    CircuitReport,
+    CircuitMetrics,
     ReportFormatter,
     HTMLReport,
 )
@@ -106,8 +106,8 @@ __all__ = [
     "NoiseImpactAnalysis",
     
     # Reporting
-    "TestReport",
-    "TestMetrics",
+    "CircuitReport",
+    "CircuitMetrics",
     "ReportFormatter",
     "HTMLReport",
 ]
